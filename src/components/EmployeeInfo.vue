@@ -23,7 +23,7 @@
     <el-form-item label="Type">
       <el-radio-group v-model="employeeInfo.type" :disabled="isViewOnly">
         <el-radio label="admin"></el-radio>
-        <el-radio label="Employee"></el-radio>
+        <el-radio label="employee"></el-radio>
       </el-radio-group>
     </el-form-item>
     <el-form-item>
@@ -35,7 +35,7 @@
   </el-card>
   <el-card class="box-card" style="margin-top: 40px" v-if="isViewOnly">
     <div slot="header" class="clearfix">
-      <span>Assigned Reviews Status</span>
+      <span>Feedbacks Recieved</span>
     </div>
     <employee-view :review-data="reviewsList" is-admin-view="true"/>
   </el-card>

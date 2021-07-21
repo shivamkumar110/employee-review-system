@@ -1,6 +1,6 @@
 <template>
   <div class="employee-view-wrapper">
-    <div class="employee-view-wrapper__text">
+    <div class="employee-view-wrapper__text" v-if="!isAdminView">
       List of Assigned Reviews
     </div>
     <el-table
