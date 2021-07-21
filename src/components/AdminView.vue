@@ -89,15 +89,15 @@ export default {
       })
     },
     handleDelete (_, row) {
-      this.deleteEmployee({id: row.id, callback: this.successCallback})
+      this.deleteEmployee({ id: row.id, callback: this.successCallback })
     },
-    successCallback() {
+    successCallback () {
       this.$message({
         showClose: true,
         message: 'User Deleted Successully!',
         type: 'success'
       })
-       this.listAllEployees()
+      this.listAllEployees()
     },
     handleAddEmployee () {
       this.$router.push({

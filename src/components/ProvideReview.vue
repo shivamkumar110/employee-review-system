@@ -49,7 +49,7 @@ export default {
         id: this.id,
         feedback: this.feedback
       }
-      this.submitReview({payload, callback: this.successCallback})
+      this.submitReview({ payload, callback: this.successCallback })
     },
     successCallback () {
       this.$message({

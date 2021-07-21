@@ -30,18 +30,18 @@ export default {
       commit('SET_REVIEWS_LIST', data.data)
       return data
     },
-    async createReview ({ commit }, {payload, callback} = {}) {
+    async createReview ({ commit }, { payload, callback } = {}) {
       const { data } = await reviewApis.createReview(payload)
       if (data.success) {
         callback()
       }
     },
-    async submitReview ({ commit }, {payload, callback} = {}) {
+    async submitReview ({ commit }, { payload, callback } = {}) {
       const { data } = await reviewApis.submitReview(payload)
       if (data.success) {
         callback()
       }
-    },
-   
+    }
+
   }
 }

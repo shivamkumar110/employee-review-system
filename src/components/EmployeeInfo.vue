@@ -39,7 +39,7 @@
     </div>
     <employee-view :review-data="reviewsList" is-admin-view="true"/>
   </el-card>
-  
+
 </div>
 
 </template>
@@ -92,7 +92,7 @@ export default {
       }
     },
     successCallback () {
-      const action =  this.action === 'edit' ? 'Updated' : 'Created'
+      const action = this.action === 'edit' ? 'Updated' : 'Created'
       this.$message({
         showClose: true,
         message: `User ${action} Successully!`,

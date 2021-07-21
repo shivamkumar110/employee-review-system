@@ -72,7 +72,7 @@ export default {
         employeeID: this.currentUserId,
         reviewers: this.reviewForm.selectedReviewers
       }
-      this.createReview({payload, callback: this.successCallback})
+      this.createReview({ payload, callback: this.successCallback })
     },
     async fetchData () {
       const employeerReviewed = await this.getEmployee(this.currentUserId)

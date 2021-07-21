@@ -1,7 +1,7 @@
 <template>
   <div class="employee-view-wrapper">
     <div class="employee-view-wrapper__text">
-      List of Assigned Reviews to you
+      List of Assigned Reviews
     </div>
     <el-table
       border
@@ -66,7 +66,7 @@ export default {
     this.getReviews({ id: this.userId, type: 'employee' })
   },
   data () {
-    return { 
+    return {
       search: ''
     }
   },

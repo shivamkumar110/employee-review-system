@@ -57,7 +57,7 @@ export default {
         callback()
       }
     },
-    async deleteEmployee ({ commit }, {id, callback } = {}) {
+    async deleteEmployee ({ commit }, { id, callback } = {}) {
       const { data } = await employeeApis.deleteEmployee(id)
       if (data.success) {
         callback()
