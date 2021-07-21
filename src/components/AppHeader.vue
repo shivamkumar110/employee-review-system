@@ -36,7 +36,7 @@ export default {
   top: 0;
   z-index: 2;
   width: 100vw;
-  height: 10%;
+  height: 80px;
   background-color: #409eff;
   &__title {
     padding: 20px;
