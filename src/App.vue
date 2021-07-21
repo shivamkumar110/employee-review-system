@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header v-if="loggedInUser"/>
+    <app-header v-if="loggedInUser && !isLoginPage"/>
     <div :class="{'app__main': loggedInUser}">
       <el-row>
         <el-col :span="22" :offset="1">
@@ -20,7 +20,10 @@ export default {
     AppHeader
   },
   computed: {
-    ...mapGetters('employee', ['loggedInUser'])
+    ...mapGetters('employee', ['loggedInUser']),
+    isLoginPage () {
+      return this.$route.name === 'Login'
+    }
   }
 }
 </script>
