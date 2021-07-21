@@ -15,6 +15,7 @@
       "
       style="width: 100%"
     >
+      <el-table-column label="EmployeeID" prop="id" width="120"> </el-table-column>
       <el-table-column label="Name" prop="name"> </el-table-column>
       <el-table-column label="Joining Date" prop="created">
       </el-table-column>
