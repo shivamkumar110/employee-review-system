@@ -1,22 +1,44 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+const Login = () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+const Home = () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+
+const ProvideReview = () => import(/* webpackChunkName: "about" */ '../components/ProvideReview.vue')
+const EmployeeInfo = () => import(/* webpackChunkName: "about" */ '../components/EmployeeInfo.vue')
+const AssignReviewers = () => import(/* webpackChunkName: "about" */ '../components/AssignReviewers.vue')
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/home',
+    name: 'home',
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/employee-info/:id/:action',
+    name: 'employeeInfo',
+    component: EmployeeInfo
+  },
+  {
+    path: '/employee/create',
+    name: 'createEmployee',
+    component: EmployeeInfo
+  },
+  {
+    path: '/assign-reviewers/:id',
+    name: 'assignReviewers',
+    component: AssignReviewers
+  },
+  {
+    path: '/provide-review/:id',
+    name: 'provideReview',
+    component: ProvideReview
   }
 ]
 
@@ -25,5 +47,4 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
 export default router
